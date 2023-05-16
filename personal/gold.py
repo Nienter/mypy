@@ -6,7 +6,7 @@ Zb = [[], []]
 #     reader=csv.reader(f)
 #     for row in reader:
 #         print(row[0])
-file = open('gold.csv','r', encoding='UTF-8')  # 打开csv文件
+file = open('../gold.csv', 'r', encoding='UTF-8')  # 打开csv文件
 reader = csv.reader(file)  # 读取csv文件
 data = list(reader)  # 将csv数据转化为列表
 length_h = len(data)  # 得到数据行数

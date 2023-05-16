@@ -54,8 +54,8 @@ def main(my_num):
 
 
 def findStr(text):
-    t = open("b.txt", "a")
-    with open("a.txt", 'r') as f:
+    t = open("../b.txt", "a")
+    with open("../a.txt", 'r') as f:
         counts = 0
         for line in f.readlines():
             time = line.count(text)
@@ -80,7 +80,7 @@ class ndder:
 
 
 def filterNum():
-    er = open("b.txt", "r")
+    er = open("../b.txt", "r")
     er.read()
 
 
@@ -140,7 +140,7 @@ def alter(file, old_str, new_str):
 if __name__ == '__main__':
     start = 22000
 
-    source = open("a.txt", "w")
+    source = open("../a.txt", "w")
     for num in range(start, 22038):
         main(num)
     source.close()
@@ -151,7 +151,7 @@ if __name__ == '__main__':
         if u < 10:
             if u != 0:
                 u = str("0" + str(u))
-        result = open("a.txt", "r")
+        result = open("../a.txt", "r")
         text = str(u)
 
     findStr(text)

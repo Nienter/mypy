@@ -69,8 +69,8 @@ def requestKey(str2):
                 # https: // www.mosys.xyz // uploads / jks / 642bc3712decd.jks
                 # print(myfile.content.decode("unicode_escape"))
                 filename = os.path.basename(downurl)
-                print(os.path.join('.\\file', filename) + "*" + downurl)
-                with open(os.path.join('.\\file', filename), "wb") as file:
+                print(os.path.join('../file', filename) + "*" + downurl)
+                with open(os.path.join('../file', filename), "wb") as file:
                     file.write(myfile.content)
             break
         for xr in index["children"]:
@@ -93,7 +93,7 @@ def requestKey(str2):
                     # print(myfile.content.decode("unicode_escape"))
                     filename = os.path.basename(downurl)
                     # print(os.path.join('.\\file', filename) + "*" + downurl)
-                    with open(os.path.join('.\\', filename), "wb") as file:
+                    with open(os.path.join('..\\', filename), "wb") as file:
                         file.write(myfile.content)
                 break
     #     # print(index["app_name"])
