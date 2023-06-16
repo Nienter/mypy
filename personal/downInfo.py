@@ -42,9 +42,9 @@ def login():
     # login
     loginresponse = requests.get(url=loginUrl, data=getJson)
     print(loginresponse.json())
-    # headers.update(
-    #     {"token": loginResponse.json()["data"]["token"], "authorization": loginResponse.json()["data"]["token"]})
-    # print(headers)
+    headers.update(
+        {"token": loginresponse.json()["data"]["token"], "authorization": loginresponse.json()["data"]["token"]})
+    print(headers)
     with open("header.json", 'w') as f:
         json.dump(headers, f)
     loginresponse.close()
@@ -53,7 +53,7 @@ def login():
 def requestKey(str2):
     # 构造发送请求
     response = requests.get(url=getProductUrl, headers=headers, data=getJson)
-    # print(response.json())
+    print(response.json())
 
     # 打印响应数据
     if response.json()['status'] == 2:  # 过期了
