@@ -31,7 +31,7 @@ def main(end):
             #     print(data)
 
 
-def deleteData():
+def delete_data():
     # myquery = {"name": {"$regex": ".*"}}
     # myquery = {"stock_code": {"$regex": "^((688|30))"},
     #            "name": {"$regex": "^((?!(ST|\\*ST|\u9000)).)*$"}}  # 去掉科创板,去掉ST,去掉带退字的
@@ -66,5 +66,7 @@ def get_page(url, json=False):
 
 
 if __name__ == '__main__':
-    # main(10)
-    deleteData()
+    main(10)
+    delete_data()
+
+

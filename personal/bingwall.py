@@ -33,8 +33,11 @@ def save_img(img_url, dirname):
         basename = today+".jpg"
         # 拼接目录与文件名，得到图片路径
         filepath = os.path.join(dirname, basename)
+        if not os.path.exists(filepath):
+            urllib.request.urlretrieve(img_url, filepath)
+        print("error")
         # 下载图片，并保存到文件夹中
-        urllib.request.urlretrieve(img_url, filepath)
+
     except IOError as e:
         print('文件操作失败', e)
     except Exception as e:
@@ -52,4 +55,4 @@ if __name__ == '__main__':
     dirname = "E:\\bingImg"  # 图片要被保存在的位置
     img_url = get_img_url()
     filepath = save_img(img_url, dirname)  # 图片文件的路径
-    set_img_as_wallpaper(filepath)
+    # set_img_as_wallpaper(filepath)
